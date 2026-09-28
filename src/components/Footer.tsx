@@ -42,7 +42,7 @@ export default function Footer() {
             <Link href="/" className="footer-logo" aria-label={`${brand.name} home`}>
               <Logo variant="light" />
             </Link>
-            <h4>— {brand.tagline}</h4>
+            <h4>- {brand.tagline}</h4>
           </div>
           <div className="footer-columns">
             <Column title="Collections">

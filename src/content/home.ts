@@ -4,10 +4,6 @@ import type { CollectionSlug } from "./site";
 
 export type Cta = { label: string; href: string; style?: "solid" | "outline" };
 
-export const announcement = {
-  left: { label: "Book a studio visit", href: "/#visit" },
-};
-
 export const heroSlides: {
   subheading: string;
   heading: string;
@@ -152,20 +148,6 @@ export const occasions = {
   cta: { label: "Ask About Gifting", message: "Hello KK Jewels Silver Studio, I would like help choosing a silver gift." },
 };
 
-export const pillars = {
-  subheading: "The KK promise",
-  heading: "Why KK Silver",
-  items: [
-    { title: "Hallmarked Purity", text: "Articles in certified 92.5 silver, with 97% and 99% fine silver for bottles and glasses." },
-    { title: "Master Craftsmanship", text: "Embossing, nakshi work, filigree and hand engraving by artisans trained in traditional techniques." },
-    { title: "Made to Be Inherited", text: "Designed to be used every day and passed down, not put away." },
-    { title: "Thoughtful Gifting", text: "Wedding, housewarming, festive and corporate gifts that carry real meaning." },
-  ],
-};
-
-/** Real customer reviews. While empty, the reviews section shows the pillars instead. */
-export const testimonials: { title: string; quote: string; name: string; context: string }[] = [];
-
 export const story = {
   id: "story",
   images: ["DZNMmVmywB9", "DZcgcsvS_IF", "DcJBPdQy8BH"] as MediaId[],
@@ -202,10 +184,3 @@ export const instagram = {
   heading: "Follow us @kkjewelssilverstudio",
   posts: ["DYe03NISite", "DdxzJHsyurM", "DcvlPviSZaL", "DdMEVKGyuQn", "Dafc2hVkn6__2", "DbqAFbXy1ih", "Db5eckdyadv"] as MediaId[],
 };
-
-export const trustBar = [
-  { label: "Hallmarked 92.5 Silver", icon: "hallmark" },
-  { label: "Handcrafted by Master Artisans", icon: "craft" },
-  { label: "Worn at the Kapoor Family Wedding", icon: "star" },
-  { label: "Studio on Ambli Bopal Road", icon: "pin" },
-] as const;

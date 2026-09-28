@@ -26,12 +26,12 @@ export default function Motion() {
     // (on client navigations the effect can run before the new page mounts).
     const build = window.setTimeout(() => {
       ctx = gsap.context(() => {
-        ScrollTrigger.batch(".reveal-scale", {
+        if (document.querySelector(".reveal-scale")) ScrollTrigger.batch(".reveal-scale", {
           start: "top 90%",
           once: true,
           onEnter: (els) => gsap.to(els, { scale: 1, opacity: 1, stagger: 0.15, duration: 0.5, overwrite: true }),
         });
-        ScrollTrigger.batch(".reveal-fade", {
+        if (document.querySelector(".reveal-fade")) ScrollTrigger.batch(".reveal-fade", {
           start: "top 90%",
           once: true,
           onEnter: (els) => gsap.to(els, { opacity: 1, stagger: 0.15, duration: 0.5, overwrite: true }),

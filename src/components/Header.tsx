@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { collections } from "@/content/site";
 import { contact } from "@/content/config";
-import { announcement } from "@/content/home";
 import { whatsappUrl, enquiryMessage } from "@/lib/whatsapp";
 import Img from "./Img";
 import Logo from "./Logo";
@@ -18,29 +17,6 @@ const nav = [
   { label: "Our Story", href: "/#story" },
   { label: "Visit", href: "/#visit" },
 ];
-
-export function AnnouncementBar() {
-  return (
-    <div className="announcement-bar">
-      <div className="announcement-bar__inner">
-        <div className="announcement-bar__left">
-          <Link href={announcement.left.href}>{announcement.left.label}</Link>
-        </div>
-        <div className="announcement-bar__right">
-          <a href={contact.instagram} target="_blank" rel="noopener" aria-label="Instagram">
-            <InstagramIcon />
-          </a>
-          <a href={whatsappUrl(enquiryMessage([]))} target="_blank" rel="noopener" aria-label="WhatsApp">
-            <WhatsAppIcon />
-          </a>
-          <a href={contact.phoneHref} className="announcement-bar__phone">
-            T. {contact.phoneDisplay}
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function Header() {
   const { enquiry, open, close, panel } = useUI();

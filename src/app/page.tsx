@@ -17,11 +17,9 @@ import ImageWithTextOverlay from "@/components/sections/ImageWithTextOverlay";
 import Gallery from "@/components/sections/Gallery";
 import FeaturedCollection from "@/components/sections/FeaturedCollection";
 import OccasionMarquee from "@/components/sections/OccasionMarquee";
-import Reviews from "@/components/sections/Reviews";
 import StorySlideshow from "@/components/sections/StorySlideshow";
 import LayeredImages from "@/components/sections/LayeredImages";
 import InstagramStrip from "@/components/sections/InstagramStrip";
-import ScrollingText from "@/components/sections/ScrollingText";
 
 // Section order follows the Lanes homepage one-to-one.
 export default function Home() {
@@ -58,11 +56,9 @@ export default function Home() {
       />
       <FeaturedCollection data={featuredAvaas} />
       <OccasionMarquee data={occasions} />
-      <Reviews />
       <StorySlideshow data={story} />
       <LayeredImages data={visit} />
       <InstagramStrip />
-      <ScrollingText />
     </>
   );
 }

@@ -25,7 +25,7 @@ export default function OccasionMarquee({ data }: { data: typeof Data }) {
         >
           {o.name}
           <span className="marquee__sep" aria-hidden="true">
-            —
+            -
           </span>
         </button>
       ))}

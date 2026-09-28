@@ -64,13 +64,18 @@ export default function ImageWithTextOverlay({
         const headingLines = splitLines(el.querySelector(".overlay__heading"));
         const textLines = splitLines(el.querySelector(".overlay__text"));
         const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: "top center", once: true } });
+        // Not every overlay has a badge / subheading / paragraph: skip empty targets.
+        const step = (targets: Element | ArrayLike<Element> | null, from: gsap.TweenVars, to: gsap.TweenVars, pos: gsap.Position) => {
+          const exists = targets && ("length" in targets ? targets.length > 0 : true);
+          if (exists) tl.fromTo(targets, from, to, pos);
+        };
         // fromTo with explicit end states: survives ScrollTrigger.refresh() mid-play.
-        tl.fromTo(el.querySelector(".overlay__bg-inner"), { scale: 1.2 }, { scale: 1, duration: 1 }, 0)
-          .fromTo(el.querySelectorAll(".inline-badge"), { opacity: 0 }, { opacity: 1, duration: 0.25 }, ">-=0.15")
-          .fromTo(el.querySelectorAll(".subheading"), { opacity: 0 }, { opacity: 1, duration: 0.5 }, ">-=0.3")
-          .fromTo(headingLines, { yPercent: 100, rotation: 2 }, { yPercent: 0, rotation: 0, duration: 0.75, stagger: 0.05 }, ">-=0.3")
-          .fromTo(textLines, { yPercent: 100, rotation: 2 }, { yPercent: 0, rotation: 0, duration: 0.5, stagger: 0.02 }, ">-=0.3")
-          .fromTo(el.querySelectorAll(".button"), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, ">-=0.3");
+        step(el.querySelector(".overlay__bg-inner"), { scale: 1.2 }, { scale: 1, duration: 1 }, 0);
+        step(el.querySelectorAll(".inline-badge"), { opacity: 0 }, { opacity: 1, duration: 0.25 }, ">-=0.15");
+        step(el.querySelectorAll(".subheading"), { opacity: 0 }, { opacity: 1, duration: 0.5 }, ">-=0.3");
+        step(headingLines, { yPercent: 100, rotation: 2 }, { yPercent: 0, rotation: 0, duration: 0.75, stagger: 0.05 }, ">-=0.3");
+        step(textLines, { yPercent: 100, rotation: 2 }, { yPercent: 0, rotation: 0, duration: 0.5, stagger: 0.02 }, ">-=0.3");
+        step(el.querySelectorAll(".button"), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, ">-=0.3");
         if (parallax) {
           gsap.fromTo(
             el.querySelector(".overlay__bg"),

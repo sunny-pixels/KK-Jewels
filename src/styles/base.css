@@ -11,8 +11,6 @@
   --color-overlay: #242424;
   --color-overlay-rgb: 36, 36, 36;
   --color-maroon: #5c1a1b;
-  --color-announcement-bg: #c2aa86;
-  --color-announcement-text: #000;
   --color-header-bg: #efebe7;
   --color-header-text: #242424;
   --solid-button-background: #242424;
@@ -24,7 +22,6 @@
   --color-star: #c2aa86;
   --section-spacing: 20px;
   --header-height: 91px;
-  --announcement-height: 0px;
   --ease: cubic-bezier(0.104, 0.204, 0.492, 1);
   --font-heading: var(--font-fraunces), serif;
   --font-body: var(--font-jost), sans-serif;

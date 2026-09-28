@@ -19,7 +19,6 @@ npm start          # serve out/ locally
 |---|---|
 | Phone number, WhatsApp number, email | `src/content/config.ts` |
 | Site URL (used for SEO and Open Graph) | `SITE_URL` in `src/content/config.ts` |
-| Customer reviews | `testimonials` in `src/content/home.ts`. While the list is empty, the reviews section shows the four studio pillars instead. |
 
 ## Where things live
 

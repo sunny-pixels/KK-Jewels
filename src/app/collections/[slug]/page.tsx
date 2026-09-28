@@ -6,7 +6,6 @@ import { media, type MediaId } from "@/content/media";
 import ImageWithTextOverlay from "@/components/sections/ImageWithTextOverlay";
 import ProductCard from "@/components/ProductCard";
 import Img from "@/components/Img";
-import ScrollingText from "@/components/sections/ScrollingText";
 import { InstagramIcon } from "@/components/Icons";
 import { instagramPostUrl } from "@/lib/instagram";
 
@@ -112,7 +111,6 @@ export default async function CollectionPage({ params }: PageProps<"/collections
           </div>
         </section>
       )}
-      <ScrollingText />
     </>
   );
 }

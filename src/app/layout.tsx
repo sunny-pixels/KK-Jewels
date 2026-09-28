@@ -3,7 +3,7 @@ import { Fraunces, Jost } from "next/font/google";
 import { brand, seo } from "@/content/site";
 import { contact, SITE_URL } from "@/content/config";
 import { media } from "@/content/media";
-import Header, { AnnouncementBar } from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Drawers from "@/components/Drawers";
 import BackToTop from "@/components/BackToTop";
@@ -65,7 +65,9 @@ const motionBoot = `try{if(!matchMedia('(prefers-reduced-motion: reduce)').match
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${fraunces.variable} ${jost.variable}`} data-scroll-behavior="smooth">
+    // suppressHydrationWarning: the inline motionBoot script adds "motion-ready" to <html>
+    // before hydration (so reveal start states apply without a flash). Only affects this element's attributes.
+    <html lang="en-IN" className={`${fraunces.variable} ${jost.variable}`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: motionBoot }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -75,7 +77,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="#main" className="skip-link">
             Skip to content
           </a>
-          <AnnouncementBar />
           <Header />
           <main id="main">{children}</main>
           <Footer />
