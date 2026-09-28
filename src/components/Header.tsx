@@ -15,7 +15,6 @@ const nav = [
   { label: "Saaj", href: "/collections/saaj-jewellery/" },
   { label: "Gifting", href: "/#gifting" },
   { label: "Our Story", href: "/#story" },
-  { label: "Visit", href: "/#visit" },
 ];
 
 export default function Header() {
