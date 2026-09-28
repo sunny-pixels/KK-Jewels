@@ -1,0 +1,583 @@
+{
+ "_doc": "Crop boxes in percent of the 1440x1800 source: [x0, y0, x1, y1]. Removes the Instagram frame and burned-in logo. Text-only / title cards are omitted (never used as photos). Optional focus [fx, fy] (percent of the crop) drives object-position.",
+ "art-of-devotion/2026-05-18_DYe03NISite": {
+  "box": [
+   5,
+   18,
+   89,
+   100
+  ]
+ },
+ "art-of-devotion/2026-06-05_DZNMmVmywB9": {
+  "box": [
+   12,
+   20,
+   86,
+   100
+  ]
+ },
+ "art-of-devotion/2026-07-14_Daw70niSUfM": {
+  "box": [
+   42,
+   13,
+   100,
+   87
+  ]
+ },
+ "art-of-devotion/2026-07-14_Daw8-_zSSJD": {
+  "box": [
+   0,
+   12,
+   58,
+   88
+  ]
+ },
+ "art-of-devotion/2026-07-16_Da2ncGgymQf": {
+  "box": [
+   24,
+   28,
+   76,
+   72
+  ]
+ },
+ "art-of-devotion/2026-09-08_DdBn69YSEqq": {
+  "box": [
+   0,
+   0,
+   100,
+   82
+  ]
+ },
+ "art-of-devotion/2026-09-08_DdBneHZSEzX": {
+  "box": [
+   0,
+   28,
+   100,
+   82
+  ]
+ },
+ "art-of-devotion/2026-09-08_DdBnN0dS_ez": {
+  "box": [
+   0,
+   0,
+   100,
+   82
+  ]
+ },
+ "art-of-devotion/2026-09-12_DdMEo_ny1Kh": {
+  "box": [
+   13,
+   25,
+   87,
+   95
+  ]
+ },
+ "art-of-devotion/2026-09-12_DdMEVKGyuQn": {
+  "box": [
+   0,
+   5,
+   100,
+   80
+  ]
+ },
+ "art-of-devotion/2026-09-12_DdMEz1MSv6c": {
+  "box": [
+   0,
+   5,
+   100,
+   80
+  ]
+ },
+ "art-of-devotion/2026-09-17_DdY08nsyilf": {
+  "box": [
+   0,
+   0,
+   100,
+   82
+  ]
+ },
+ "art-of-devotion/2026-09-17_DdY1DqZSVR3": {
+  "box": [
+   13,
+   24,
+   87,
+   89
+  ]
+ },
+ "art-of-devotion/2026-09-17_DdY1LWVSSCF": {
+  "box": [
+   0,
+   0,
+   100,
+   80
+  ]
+ },
+ "art-of-devotion/2026-09-20_Ddgj3a_SSbY": {
+  "box": [
+   13,
+   25,
+   87,
+   89
+  ],
+  "focus": [
+   50,
+   45
+  ]
+ },
+ "art-of-devotion/2026-09-20_DdgjUtpSALA": {
+  "box": [
+   13,
+   26,
+   87,
+   89
+  ]
+ },
+ "art-of-hosting/2026-05-13_DYRceGRyN9N": {
+  "box": [
+   9,
+   29.5,
+   91,
+   72
+  ]
+ },
+ "art-of-hosting/2026-05-18_DYe0LIUSqg0": {
+  "box": [
+   14,
+   18,
+   86,
+   100
+  ]
+ },
+ "art-of-hosting/2026-05-28_DY4fWquSnr6": {
+  "box": [
+   4,
+   24,
+   96,
+   65
+  ]
+ },
+ "art-of-hosting/2026-05-28_DY4h_ZgyY1R": {
+  "box": [
+   4,
+   24,
+   96,
+   65
+  ]
+ },
+ "art-of-hosting/2026-06-11_DZcg4dZSYun": {
+  "box": [
+   9,
+   30,
+   91,
+   71
+  ]
+ },
+ "art-of-hosting/2026-06-11_DZcgcsvS_IF": {
+  "box": [
+   0,
+   18,
+   100,
+   100
+  ]
+ },
+ "art-of-hosting/2026-06-11_DZcgQYZyOv1": {
+  "box": [
+   9,
+   30,
+   91,
+   71
+  ]
+ },
+ "art-of-hosting/2026-07-18_Da7s3SPS7yY": {
+  "box": [
+   13,
+   25,
+   87,
+   89
+  ]
+ },
+ "art-of-hosting/2026-07-18_Da7stgqy1fW": {
+  "box": [
+   0,
+   5,
+   100,
+   80
+  ]
+ },
+ "art-of-hosting/2026-07-18_Da7tNJHyPLm": {
+  "box": [
+   0,
+   5,
+   100,
+   80
+  ]
+ },
+ "art-of-hosting/2026-07-23_DbIuYb6y9-j": {
+  "box": [
+   0,
+   19,
+   100,
+   80
+  ]
+ },
+ "art-of-hosting/2026-07-23_DbIvJ7tyfJq": {
+  "box": [
+   0,
+   19,
+   100,
+   81
+  ]
+ },
+ "art-of-hosting/2026-07-23_DbIwqLtSr_N": {
+  "box": [
+   0,
+   19,
+   100,
+   81
+  ]
+ },
+ "art-of-hosting/2026-07-30_DbaqCgVy3cu": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "art-of-hosting/2026-07-30_DbaqT-BSH7L": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "art-of-hosting/2026-07-30_Dbar4DVyW5u": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "art-of-hosting/2026-08-05_DbqAFbXy1ih": {
+  "box": [
+   0,
+   0,
+   100,
+   86
+  ]
+ },
+ "art-of-hosting/2026-08-05_DbqAOk3SGF-": {
+  "box": [
+   13,
+   24,
+   87,
+   89
+  ]
+ },
+ "art-of-hosting/2026-08-05_DbqAW5Fyckg": {
+  "box": [
+   0,
+   3,
+   100,
+   84
+  ]
+ },
+ "art-of-legacy/2026-05-18_DYezz9_y6zT": {
+  "box": [
+   11,
+   20,
+   89,
+   100
+  ]
+ },
+ "art-of-legacy/2026-08-11_Db5d1szy5Ho": {
+  "box": [
+   24,
+   27,
+   76,
+   83
+  ]
+ },
+ "art-of-legacy/2026-08-11_Db5eckdyadv": {
+  "box": [
+   24,
+   27,
+   76,
+   83
+  ]
+ },
+ "art-of-legacy/2026-08-14_DcAuN-5yNBx": {
+  "box": [
+   12,
+   29,
+   88,
+   73
+  ]
+ },
+ "art-of-legacy/2026-08-17_DcJBkMEyjkE": {
+  "box": [
+   0,
+   18,
+   100,
+   100
+  ]
+ },
+ "art-of-legacy/2026-08-17_DcJBPdQy8BH": {
+  "box": [
+   0,
+   18,
+   100,
+   100
+  ]
+ },
+ "art-of-legacy/2026-08-17_DcJBZdhS8gy": {
+  "box": [
+   11,
+   19,
+   89,
+   51
+  ]
+ },
+ "avaas-collection/2026-05-23_DYq1a_-ylNG": {
+  "box": [
+   4,
+   26,
+   96,
+   62
+  ]
+ },
+ "avaas-collection/2026-05-23_DYq1wXKSMFP": {
+  "box": [
+   16,
+   26,
+   84,
+   51
+  ]
+ },
+ "avaas-collection/2026-05-23_DYq2OdsSRwT": {
+  "box": [
+   4,
+   26,
+   95,
+   62
+  ]
+ },
+ "avaas-collection/2026-06-05_DZNMvbZS9MS": {
+  "box": [
+   10,
+   19,
+   89,
+   100
+  ]
+ },
+ "avaas-collection/2026-06-05_DZNMVmqyCx3": {
+  "box": [
+   10,
+   19,
+   89,
+   100
+  ]
+ },
+ "celebrity/2026-07-07_Dafc2hVkn6__1": {
+  "box": [
+   0,
+   0,
+   100,
+   76
+  ],
+  "focus": [
+   55,
+   40
+  ]
+ },
+ "celebrity/2026-07-07_Dafc2hVkn6__2": {
+  "box": [
+   0,
+   0,
+   100,
+   100
+  ]
+ },
+ "celebrity/2026-07-07_DafY_2dkm_8_1": {
+  "box": [
+   0,
+   0,
+   100,
+   76
+  ],
+  "focus": [
+   55,
+   50
+  ]
+ },
+ "celebrity/2026-07-07_DafY_2dkm_8_2": {
+  "box": [
+   0,
+   0,
+   100,
+   100
+  ]
+ },
+ "celebrity/2026-07-07_DafY_2dkm_8_3": {
+  "box": [
+   0,
+   0,
+   100,
+   100
+  ]
+ },
+ "joy-of-celebration/2026-06-01_DZCO2WPoBcn": {
+  "box": [
+   4,
+   24,
+   96,
+   65
+  ]
+ },
+ "joy-of-celebration/2026-06-01_DZCPhYQIBaS": {
+  "box": [
+   4,
+   24,
+   96,
+   65
+  ]
+ },
+ "joy-of-celebration/2026-06-01_DZCPOfkoopj": {
+  "box": [
+   16,
+   27,
+   84,
+   51
+  ]
+ },
+ "joy-of-celebration/2026-08-23_DcYebiRyiKb": {
+  "box": [
+   13,
+   10,
+   87,
+   74
+  ]
+ },
+ "joy-of-celebration/2026-08-23_DcYfgglSQpU": {
+  "box": [
+   13,
+   10,
+   87,
+   74
+  ]
+ },
+ "joy-of-celebration/2026-08-26_Dcfh3_ByEjx": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "joy-of-celebration/2026-08-26_DcfiFHQSWU5": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "joy-of-celebration/2026-08-26_DcfiRvJScte": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "joy-of-celebration/2026-09-01_DcvlAuASNgM": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "joy-of-celebration/2026-09-01_DcvlPviSZaL": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "joy-of-celebration/2026-09-01_DcvlWN7SdnH": {
+  "box": [
+   0,
+   20,
+   100,
+   80
+  ]
+ },
+ "joy-of-celebration/2026-09-03_Dc0sfmMy9I1": {
+  "box": [
+   13,
+   11,
+   87,
+   75
+  ]
+ },
+ "joy-of-celebration/2026-09-03_Dc0sMA1ymAT": {
+  "box": [
+   13,
+   11,
+   87,
+   75
+  ]
+ },
+ "saaj-jewellery/2026-09-23_DdoIzD0SuL2": {
+  "box": [
+   11,
+   25,
+   89,
+   91
+  ]
+ },
+ "saaj-jewellery/2026-09-27_DdxzbO-SsHW": {
+  "box": [
+   0,
+   29,
+   100,
+   84
+  ]
+ },
+ "saaj-jewellery/2026-09-27_DdxzJHsyurM": {
+  "box": [
+   0,
+   29,
+   100,
+   86
+  ]
+ },
+ "saaj-jewellery/2026-09-27_DdxzPDWS50t": {
+  "box": [
+   16,
+   29,
+   84,
+   86
+  ]
+ },
+ "videos/2026-06-17_DZsERV6SXtD_cover": {
+  "box": [
+   0,
+   0,
+   100,
+   100
+  ]
+ },
+ "videos/2026-09-20_DdgjboWSn8M_cover": {
+  "box": [
+   0,
+   0,
+   100,
+   100
+  ]
+ }
+}
