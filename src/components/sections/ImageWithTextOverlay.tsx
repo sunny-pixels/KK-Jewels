@@ -63,19 +63,21 @@ export default function ImageWithTextOverlay({
         const el = root.current!;
         const headingLines = splitLines(el.querySelector(".overlay__heading"));
         const textLines = splitLines(el.querySelector(".overlay__text"));
-        const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: "top center", once: true } });
+        const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: "top 70%", once: true } });
         // Not every overlay has a badge / subheading / paragraph: skip empty targets.
         const step = (targets: Element | ArrayLike<Element> | null, from: gsap.TweenVars, to: gsap.TweenVars, pos: gsap.Position) => {
           const exists = targets && ("length" in targets ? targets.length > 0 : true);
           if (exists) tl.fromTo(targets, from, to, pos);
         };
         // fromTo with explicit end states: survives ScrollTrigger.refresh() mid-play.
+        // Text runs alongside the background zoom rather than after it (~1.1s total).
         step(el.querySelector(".overlay__bg-inner"), { scale: 1.2 }, { scale: 1, duration: 1 }, 0);
-        step(el.querySelectorAll(".inline-badge"), { opacity: 0 }, { opacity: 1, duration: 0.25 }, ">-=0.15");
-        step(el.querySelectorAll(".subheading"), { opacity: 0 }, { opacity: 1, duration: 0.5 }, ">-=0.3");
-        step(headingLines, { yPercent: 100, rotation: 2 }, { yPercent: 0, rotation: 0, duration: 0.75, stagger: 0.05 }, ">-=0.3");
-        step(textLines, { yPercent: 100, rotation: 2 }, { yPercent: 0, rotation: 0, duration: 0.5, stagger: 0.02 }, ">-=0.3");
-        step(el.querySelectorAll(".button"), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, ">-=0.3");
+        step(el.querySelectorAll(".inline-badge"), { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.1);
+        step(el.querySelectorAll(".subheading"), { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.1);
+        tl.addLabel("heading", 0.2);
+        step(headingLines, { yPercent: 100, rotation: 2 }, { yPercent: 0, rotation: 0, duration: 0.6, stagger: 0.05 }, "heading");
+        step(textLines, { yPercent: 100, rotation: 2 }, { yPercent: 0, rotation: 0, duration: 0.45, stagger: 0.02 }, "heading+=0.25");
+        step(el.querySelectorAll(".button"), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, "heading+=0.45");
         if (parallax) {
           gsap.fromTo(
             el.querySelector(".overlay__bg"),
