@@ -3,6 +3,7 @@ import { Fraunces, Jost } from "next/font/google";
 import { brand, seo } from "@/content/site";
 import { contact, SITE_URL } from "@/content/config";
 import { media } from "@/content/media";
+import { defaultShare } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Drawers from "@/components/Drawers";
@@ -29,13 +30,7 @@ export const metadata: Metadata = {
   title: { default: seo.title, template: `%s | ${brand.name}` },
   description: seo.description,
   keywords: seo.keywords,
-  openGraph: {
-    type: "website",
-    siteName: brand.name,
-    title: seo.title,
-    description: seo.description,
-    images: [{ url: media["hero-hosting"].src, width: 1200, height: 550 }],
-  },
+  ...defaultShare,
   icons: { icon: "/icon.svg" },
 };
 
@@ -47,7 +42,7 @@ const jsonLd = {
   name: brand.name,
   slogan: brand.tagline,
   url: SITE_URL,
-  image: `${SITE_URL}${media["hero-hosting"].src}`,
+  image: `${SITE_URL}/og-image.jpg`,
   telephone: contact.phoneDisplay,
   address: {
     "@type": "PostalAddress",

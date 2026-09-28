@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getCollection, getProduct, products } from "@/content/site";
+import { brand, getCollection, getProduct, products } from "@/content/site";
+import { shareMetadata } from "@/lib/seo";
 import { media } from "@/content/media";
 import { SITE_URL } from "@/content/config";
 import Img from "@/components/Img";
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: PageProps<"/products/[slug]">
   return {
     title: p.name,
     description: p.description,
-    openGraph: { images: [{ url: media[p.image].src }] },
+    ...shareMetadata({ title: `${p.name} | ${brand.name}`, description: p.description, path: `/products/${p.slug}/` }),
   };
 }
 

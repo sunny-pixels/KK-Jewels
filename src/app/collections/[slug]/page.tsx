@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { collections, getCollection, products, productsIn } from "@/content/site";
+import { brand, collections, getCollection, products, productsIn } from "@/content/site";
+import { shareMetadata } from "@/lib/seo";
 import { media, type MediaId } from "@/content/media";
 import ImageWithTextOverlay from "@/components/sections/ImageWithTextOverlay";
 import ProductCard from "@/components/ProductCard";
@@ -17,10 +18,11 @@ export async function generateMetadata({ params }: PageProps<"/collections/[slug
   const { slug } = await params;
   const c = getCollection(slug);
   if (!c) return {};
+  const description = `${c.tagline}. ${c.description}`;
   return {
     title: c.name,
-    description: `${c.tagline}. ${c.description}`,
-    openGraph: { images: [{ url: media[c.banner].src }] },
+    description,
+    ...shareMetadata({ title: `${c.name} | ${brand.name}`, description, path: `/collections/${c.slug}/` }),
   };
 }
 

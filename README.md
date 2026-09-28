@@ -18,7 +18,7 @@ npm start          # serve out/ locally
 | What | Where |
 |---|---|
 | Phone number, WhatsApp number, email | `src/content/config.ts` |
-| Site URL (used for SEO and Open Graph) | `SITE_URL` in `src/content/config.ts` |
+| Site URL for link previews (WhatsApp, Facebook, X need an absolute image URL) | Set the `NEXT_PUBLIC_SITE_URL` env var, e.g. `https://kkjewels.vercel.app`. On Vercel it falls back to the production domain automatically. |
 
 ## Where things live
 
@@ -26,6 +26,10 @@ npm start          # serve out/ locally
 - `src/content/home.ts` holds the homepage copy, section by section, in Lanes order.
 - `src/components/sections/*` has one component per Lanes section, with styles in `src/styles/sections.css`.
 - `src/lib/motion.ts` and `src/components/Motion.tsx` hold the GSAP animations: scroll reveals, split-line headings and parallax.
+
+## Link preview image
+
+`public/og-image.jpg` (1200×630) is the preview card shown when the site is shared on WhatsApp, Facebook or X. It is set for every page in `src/lib/seo.ts`.
 
 ## Images
 

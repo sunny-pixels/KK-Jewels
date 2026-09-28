@@ -13,4 +13,12 @@ export const contact = {
   mapsHref: "https://maps.google.com/?q=KK+Jewels+Silver+Studio+One42+Ambli+Bopal+Road+Ahmedabad",
 };
 
-export const SITE_URL = "https://kkjewelssilverstudio.com";
+/**
+ * Public site address, used for absolute link-preview (Open Graph) URLs.
+ * Set NEXT_PUBLIC_SITE_URL when deploying (e.g. https://kkjewels.vercel.app). On Vercel
+ * the production domain is picked up automatically if the variable is not set.
+ */
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://kkjewelssilverstudio.com")
+).replace(/\/$/, "");
