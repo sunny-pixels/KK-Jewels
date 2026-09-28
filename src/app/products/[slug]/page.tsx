@@ -8,6 +8,7 @@ import Img from "@/components/Img";
 import ProductCard from "@/components/ProductCard";
 import ThemeScroll from "@/components/ThemeScroll";
 import ProductActions from "@/components/ProductActions";
+import ProductLayout from "@/components/ProductLayout";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -59,18 +60,17 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
               <span aria-hidden="true">/</span>
               <span aria-current="page">{p.name}</span>
             </nav>
-            <div className="product-page__grid">
-              <div className={`product-page__media${gallery.length === 1 ? " is-single" : ""}`}>
-                {gallery.map((id, i) => (
-                  <div key={id} className="product-page__image">
-                    <div className="aspect-ratio" style={{ ["--ratio-percent" as string]: "125%" }}>
-                      <Img id={id} alt={i === 0 ? p.name : `${p.name}, another view`} sizes="(min-width: 1068px) 30vw, (min-width: 768px) 50vw, 100vw" priority={i === 0} />
-                    </div>
+            <ProductLayout
+              single={gallery.length === 1}
+              media={gallery.map((id, i) => (
+                <div key={id} className="product-page__image">
+                  <div className="aspect-ratio" style={{ ["--ratio-percent" as string]: "125%" }}>
+                    <Img id={id} alt={i === 0 ? p.name : `${p.name}, another view`} sizes="(min-width: 1068px) 30vw, (min-width: 768px) 50vw, 100vw" priority={i === 0} />
                   </div>
-                ))}
-              </div>
-              <div className="product-page__info">
-                <div className="product-page__sticky">
+                </div>
+              ))}
+              info={
+                <>
                   <Link href={`/collections/${c.slug}/`} className="product-card-vendor">
                     {c.name}
                   </Link>
@@ -105,12 +105,12 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
                       <dd>Priced by weight. Ask us on WhatsApp for today&apos;s price.</dd>
                     </div>
                   </dl>
-                  <a href={p.instagram} target="_blank" rel="noopener" className="text-button">
+                  <a href={p.instagram} target="_blank" rel="noopener" className="text-button" data-pin-end>
                     See this piece on Instagram
                   </a>
-                </div>
-              </div>
-            </div>
+                </>
+              }
+            />
           </div>
         </div>
       </section>
