@@ -60,10 +60,10 @@ def placeholder(im: Image.Image) -> str:
 def export(im: Image.Image, mid: str, widths=WIDTHS):
     """Save im at each width (never upscaling). Returns manifest entry."""
     files = []
-    for w in widths:
-        if w > im.width and files:
-            continue
-        w = min(w, im.width)
+    # Requested widths up to the source width, plus the full source width itself
+    # (so a 1440px crop is exported at 480/960/1440, never capped at 960).
+    targets = sorted({w for w in widths if w < im.width} | {min(max(widths), im.width)})
+    for w in targets:
         h = round(im.height * w / im.width)
         name = f"{mid}-{w}.webp"
         im.resize((w, h), Image.LANCZOS).save(OUT / name, "WEBP", quality=QUALITY, method=6)
